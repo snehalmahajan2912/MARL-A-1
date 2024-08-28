@@ -3,11 +3,11 @@
 **Optimal Value Function:**
 
 Value Iteration:
-Hostel: 19.70
+Hostel: 1.0
 
-Academic Building: 21.65
+Academic Building: 2.3999999999999995
 
-Canteen: 20.78
+Canteen: 1.9
 
 
 **Optimal Policy:**
