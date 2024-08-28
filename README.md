@@ -4,7 +4,9 @@
 
 Value Iteration:
 Hostel: 19.70
+
 Academic Building: 21.65
+
 Canteen: 20.78
 
 
