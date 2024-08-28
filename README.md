@@ -46,7 +46,8 @@ Canteen: Attend Class
 | Canteen           | Eat Food     | Canteen           | 1.0                    | +1     |
 
 
-![WhatsApp Image 2024-08-28 at 11 58 31_d88c473d](https://github.com/user-attachments/assets/a1ec5b47-f4fe-4869-aa9a-af37487089f7)
+![WhatsApp Image 2024-08-28 at 11 58 31_d88c473d](https://github.com/user-attachments/assets/3852e6bf-3198-47cc-91dd-c9d23a3480c5)
+
 
 
 
