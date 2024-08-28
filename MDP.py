@@ -1,9 +1,6 @@
 import numpy as np
 
 # Define the MDP parameters
-discount_factor = 0.9
-
-# Define the state space, action space, transition probabilities, and rewards
 states = ['Hostel', 'Academic Building', 'Canteen']
 actions = ['Attend Class', 'Eat Food']
 transition_prob = {
@@ -35,7 +32,7 @@ def value_iteration():
         for s in states:
             max_value = float('-inf')
             for a in actions:
-                value = sum(transition_prob.get((s, a, s_next), 0) * (rewards.get((s, a, s_next), 0) + discount_factor * V[s_next]) for s_next in states)
+                value = sum(transition_prob.get((s, a, s_next), 0) * rewards.get((s, a, s_next), 0) for s_next in states)
                 if value > max_value:
                     max_value = value
             V_new[s] = max_value
@@ -52,13 +49,13 @@ def policy_iteration():
         for _ in range(1000):  # Number of policy evaluation iterations
             for s in states:
                 a = policy[s]
-                V[s] = sum(transition_prob.get((s, a, s_next), 0) * (rewards.get((s, a, s_next), 0) + discount_factor * V[s_next]) for s_next in states)
+                V[s] = sum(transition_prob.get((s, a, s_next), 0) * rewards.get((s, a, s_next), 0) for s_next in states)
         policy_stable = True
         for s in states:
             max_value = float('-inf')
             best_action = None
             for a in actions:
-                value = sum(transition_prob.get((s, a, s_next), 0) * (rewards.get((s, a, s_next), 0) + discount_factor * V[s_next]) for s_next in states)
+                value = sum(transition_prob.get((s, a, s_next), 0) * rewards.get((s, a, s_next), 0) for s_next in states)
                 if value > max_value:
                     max_value = value
                     best_action = a
